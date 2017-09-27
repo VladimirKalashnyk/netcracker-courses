@@ -9,6 +9,7 @@ public class Main {
 
         args = sort(args);
         print(args);
+
     }
 
     private static void print(String[] args) {
