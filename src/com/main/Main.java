@@ -8,6 +8,9 @@ public class Main {
         args = sort(args);
         print(args);
 
+        args = new String[]{"XXX", "CCC", "DDD", "AAA", "TTT"};
+        args = sort(args);
+        print(args);
     }
 
     private static void print(String[] args) {
@@ -16,7 +19,7 @@ public class Main {
         }
     }
 
-    private static String[] sort(String[] args) {
+    private static <T extends Comparable<T>> T[] sort(T[] args) {
         int min;
         for (int i = 0; i < args.length - 1; i++) {
             min = i;
@@ -25,7 +28,7 @@ public class Main {
                     min = j;
                 }
             }
-            String temp = args[min];
+            T temp = args[min];
             args[min] = args[i];
             args[i] = temp;
         }
