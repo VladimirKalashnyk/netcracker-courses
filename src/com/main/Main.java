@@ -27,6 +27,5 @@ public class Main {
             args[min] = args[i];
             args[i] = temp;
         }
-        return args;
     }
 }
