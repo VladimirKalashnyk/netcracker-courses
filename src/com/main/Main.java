@@ -4,22 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
         print(args);
-
-        args = sort(args);
-        print(args);
-
-        args = new String[]{"XXX", "CCC", "DDD", "AAA", "TTT"};
-        args = sort(args);
-        print(args);
+        sort(args);
+        print(args);        
     }
 
-    private static void print(String[] args) {
+    public static void print(String[] args) {
         for (String str : args) {
             System.out.println(str);
         }
     }
 
-    private static <T extends Comparable<T>> T[] sort(T[] args) {
+    public static <T extends Comparable<T>> void sort(T[] args) {
         int min;
         for (int i = 0; i < args.length - 1; i++) {
             min = i;
